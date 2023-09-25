@@ -1,0 +1,339 @@
+/* lato-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/lato-v24-latin-regular.woff2") format("woff2");
+}
+/* lato-700 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/lato-v24-latin-700.woff2") format("woff2");
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(202, 197, 197);
+  font-family: "Lato", sans-serif;
+  font-size: 1.125rem;
+  white-space: nowrap;
+}
+
+ul {
+  list-style-type: none;
+  font-family: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  font-family: inherit;
+}
+
+button {
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #0A0A23;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 15px;
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  gap: 15px;
+}
+
+.menu-title {
+  color: #fff;
+  cursor: pointer;
+  padding: 4px 12px;
+  border: 1px solid #fff;
+}
+.menu-title:hover {
+  background-color: #fff;
+  color: #0a0a23;
+}
+
+.menu-title2 {
+  color: #fff;
+  cursor: pointer;
+  padding: 4px 6px;
+  border: 1px solid #fff;
+  display: none;
+}
+.menu-title2:hover {
+  background-color: #fff;
+  color: #0a0a23;
+}
+
+.header__nav > :last-child a {
+  color: #0a0a23;
+  border: 3px solid #FEAC32;
+  padding: 2.8px 12px;
+  background-image: linear-gradient(#fecc4c, #ffac33);
+}
+.header__nav > :last-child a:hover {
+  background: #fecc4c;
+}
+
+.menu-list-wrapper,
+.language-list-wrapper {
+  position: relative;
+}
+
+.language-list,
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  display: none;
+  position: absolute;
+  left: -100px;
+  top: 40px;
+  width: 280px;
+}
+.language-list li,
+.menu-list li {
+  background-color: #0a0a23;
+  padding: 12px;
+}
+.language-list li a,
+.language-list li button,
+.menu-list li a,
+.menu-list li button {
+  padding-left: 5px;
+  background-color: #0a0a23;
+  color: #dfdfe2;
+}
+.language-list li:not(:last-child):hover,
+.menu-list li:not(:last-child):hover {
+  background-color: #dfdfe2;
+}
+.language-list li:not(:last-child):hover a,
+.language-list li:not(:last-child):hover button,
+.menu-list li:not(:last-child):hover a,
+.menu-list li:not(:last-child):hover button {
+  color: #0a0a23;
+  background-color: #dfdfe2;
+}
+.language-list li > :nth-child(3),
+.menu-list li > :nth-child(3) {
+  border-top: 1px solid #dfdfe2;
+}
+.language-list li > a,
+.menu-list li > a {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-list > :last-child {
+  border-top: 1px solid #dfdfe2;
+}
+.menu-list > :last-child a {
+  opacity: 0.5;
+}
+
+.globe-button {
+  background-color: #0A0A23;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5px 4px;
+}
+.globe-button:hover {
+  background-color: #fff;
+}
+.globe-button:hover img {
+  filter: invert(8%) sepia(6%) saturate(6522%) hue-rotate(204deg) brightness(91%) contrast(107%);
+}
+
+.sign-in-button img {
+  display: none;
+}
+
+.language-list-wrapper img {
+  width: 25px;
+  filter: invert(93%) sepia(0%) saturate(7500%) hue-rotate(70deg) brightness(107%) contrast(110%);
+}
+
+.search-space {
+  display: flex;
+  gap: 0.25em;
+  width: 500px;
+  background-color: #3B3B4F;
+}
+
+.search-space:focus-within {
+  outline: 3px solid #198EEE;
+}
+.search-space i {
+  color: white;
+  font-size: 16px;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search-space i :hover {
+  background-color: #3b3b4f;
+  cursor: pointer;
+}
+.search-space input {
+  background-color: #3B3B4F;
+  border: none;
+  color: #fff;
+}
+.search-space input:focus {
+  outline: none;
+}
+.search-space input::placeholder {
+  color: #D0D0CC;
+}
+
+.main {
+  padding-top: 300px;
+}
+
+@media (max-width: 1440px) {
+  .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+@media (max-width: 992px) {
+  .search-space {
+    display: none;
+  }
+  .header__nav {
+    gap: 10px;
+  }
+}
+@media (max-width: 600px) {
+  .menu-list-wrapper span.menu-title {
+    display: none;
+  }
+  .menu-list-wrapper span.menu-title2 {
+    display: block;
+  }
+  .sign-in-button span {
+    display: none;
+  }
+  .sign-in-button img {
+    display: block;
+  }
+}
+.switch-button-wrapper {
+  position: relative;
+  width: 180px;
+  height: 80px;
+  transform: scale(0.8);
+}
+
+.switch-button {
+  appearance: none;
+}
+.switch-button::after {
+  content: "";
+  width: 180px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 40px;
+  background: rgb(126, 127, 129);
+  background: linear-gradient(146deg, rgb(126, 127, 129) 0%, rgb(110, 111, 113) 100%);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  box-shadow: inset 1px 2px 0px;
+  transition: 0.3s all ease-in;
+}
+
+.circle-radius {
+  width: 60px;
+  height: 60px;
+  border-radius: 40px;
+  background: rgb(220, 221, 223);
+  background: linear-gradient(135deg, rgb(220, 221, 223) 0%, rgb(238, 238, 238) 50%, rgb(249, 249, 249) 100%);
+  z-index: 1;
+}
+
+.circle-wrapper {
+  background: rgb(253, 252, 250);
+  background: linear-gradient(135deg, rgb(253, 252, 250) 0%, rgb(214, 215, 217) 100%);
+  width: 70px;
+  height: 70px;
+  border-radius: 40px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 5px;
+  left: 5px;
+  transition: all 0.3s ease-out;
+  pointer-events: none;
+}
+
+.switch-button:checked ~ .circle-wrapper {
+  left: 115px;
+}
+
+.switch-button:checked::after {
+  background: #1CA347;
+}
+
+.switch-button::before {
+  content: "OFF";
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 35px;
+  font-weight: 900;
+  position: absolute;
+  z-index: 2;
+  right: 25px;
+  top: 15px;
+  color: #3C3D3F;
+}
+
+.switch-button:checked::before {
+  color: #01410F;
+  top: 15px;
+  left: 25px;
+  content: "ON";
+}
+
+.button .container {
+  display: flex;
+  gap: 200px;
+}
+
+/*# sourceMappingURL=general.css.map */
