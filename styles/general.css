@@ -251,6 +251,12 @@ button {
   .sign-in-button img {
     display: block;
   }
+  .sign-in-button a {
+    display: flex;
+    width: 30px;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .switch-button-wrapper {
   position: relative;
